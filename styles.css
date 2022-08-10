@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+}
+body:after {
+  content: '';
+  background-image: url('/images/bg-main-desktop.png');
+  background-size: cover;
+  width: 35%;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0
+}
+.main * {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.pusher {
+  width: 20%;
+  max-width: 240px;
+}
+.div-card.front{
+  margin-left: 10px;
+  margin-top: calc(100vh / 6);
+  margin-right: 20px;
+  width: 320px;
+  top: 100px;
+}
+.div-card.back{
+  margin-left: 70px;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 320px;
+}
+@media (max-width: 812px) {
+  .div-card.back {
+    margin-left: 10px
+  }
+}
+.card-div img {
+  z-index: -1
+}
+.text {
+  position: absolute;
+  width: 320px;
+  height: 175px;
+}
+.text p {
+  color: white;
+  font-size: 14px;
+}
+
+.text #first {
+  font-size: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 15px
+}
+.text #second {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+.text #third {
+  position: absolute;
+  bottom: 20px;
+  right: 35px
+}
+.text #separator {
+  position: absolute;
+  bottom: 21px;
+  right: 28px
+}
+.text #fifth {
+  position: absolute;
+  bottom: 20px;
+  right: 7px;
+}
+.text #fourth #logo {
+  position: absolute;
+  height: 33px;
+  width: 60px;
+  top: 10px;
+  left: 10px;
+}
+.text.back .backtext {
+  position: absolute;
+  color: black;
+  top: 77px;
+  right: 35px;
+}
+
+.form input {
+  margin-bottom: 15px;
+}
+.form {
+  width: calc(100vw / 1.5);
+  height: 100vh;
+}
+.form form {
+  width: 400px;
+  margin: auto;
+}
+.form form input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin-top: 5px;
+  padding-left: 5px;
+  font-size: 17px;
+}
+.form form .last-row {
+  display: flex;
+  flex-direction: row;
+}
+.MMYY div {
+  display: flex;
+  flex-direction: row;
+}
+.MMYY #MM,#YY {
+  width: 45%
+}
+.MMYY #MM {
+  margin-right: 9px;
+}
+.cvc {
+  width: 45%;
+}
+.form button {
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all ease-in-out .2s;
+}
+button:hover {
+  background-color: hsl(279, 6%, 55%);
+  color: hsl(278, 68%, 11%);
+}
+footer {
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#git {
+  height: 15x;
+  width: 15px;
+}
