@@ -16,6 +16,17 @@ body:after {
   top: 0;
   left: 0
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .main {
   display: flex;
   flex-direction: row;
@@ -24,6 +35,10 @@ body:after {
 .main * {
   display: flex;
   flex-direction: column;
+}
+.cards-container {
+  margin: auto 0;
+  height: fit-content;
 }
 .pusher {
   width: 20%;
@@ -146,7 +161,6 @@ footer a {
 }
 .div-card.front{
   margin-left: 10px;
-  margin-top: calc(100vh / 6);
   margin-right: 20px;
   width: 320px;
   top: 100px;
@@ -164,7 +178,7 @@ footer a {
 }
 @media (max-width: 750px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   * {
     margin: 0;

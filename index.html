@@ -15,46 +15,48 @@
 </head>
 
 <body>
-  <div class="main">  
+  <div class="main">
     <div class="pusher"></div>
     <div class="cards-container">
-    <div class="div-card front">
-      <img class="card front" src="/images/bg-card-front.png" />
-      <div class="text">
-        <p id="first">0000 0000 0000 0000</p>
-        <p id="second">Jane Appleseed</p>
-        <p id="third">00</p>
-        <p id="separator">/</p>
-        <p id="fifth">00</p>
-        <p id="fourth">
-          <img id='logo' src="/images/card-logo.svg">
-        </p>
+      <div class="div-card front">
+        <img class="card front" src="/images/bg-card-front.png" />
+        <div class="text">
+          <p id="first">0000 0000 0000 0000</p>
+          <p id="second">Jane Appleseed</p>
+          <p id="third">00</p>
+          <p id="separator">/</p>
+          <p id="fifth">00</p>
+          <p id="fourth">
+            <img id='logo' src="/images/card-logo.svg">
+          </p>
+        </div>
       </div>
-    </div>
       <div class="div-card back">
         <img class="card back" src="/images/bg-card-back.png" />
         <div class="text back">
           <p class='backtext'>00</p>
+        </div>
       </div>
-    </div>
     </div>
     <div class="form">
       <form>
         Cardholder Name
-        <input id="name" type="text" pattern="[\sA-Za-z_-]*" minlength="3" maxlength="25" placeholder="e.g. Jane Appleseed">
+        <input id="name" type="text" pattern="[\sA-Za-z_-]*" minlength="3" maxlength="25"
+          placeholder="e.g. Jane Appleseed">
         Card Number
-        <input id="card-number" type="text" pattern="\d*" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+        <input id="card-number" type="number" pattern="\d*" minlength="16" maxlength="16"
+          placeholder="e.g. 1234 5678 9123 0000">
         <div class="last-row">
           <div class="MMYY">
             Exp. Date (MM/YY)
             <div>
-              <input id="MM" type="text" pattern="\d*" minlength="2" maxlength="2" placeholder="MM">
-              <input id="YY" type="text" pattern="\d*" minlength="2" maxlength="2" placeholder="YY">
+              <input id="MM" type="number" pattern="\d*" minlength="2" maxlength="2" placeholder="MM">
+              <input id="YY" type="number" pattern="\d*" minlength="2" maxlength="2" placeholder="YY">
             </div>
           </div>
           <div class="cvc">
             CVC
-            <input id="cvc" type="text" minlength="3" maxlength="3" pattern="\d*" placeholder="e.g. 123">
+            <input id="cvc" type="number" minlength="3" maxlength="3" pattern="\d*" placeholder="e.g. 123">
           </div>
         </div>
         <button class="sub">Confirm</button>
@@ -62,10 +64,10 @@
     </div>
   </div>
   <footer>
-    <a href="https://github.com/yonext24/Frontend-Mentor-Card-Details">See on github 
+    <a href="https://github.com/yonext24/Frontend-Mentor-Card-Details">See on github
       <img id="git" src="images/github-svgrepo-com.svg" alt="github">
     </a>
-    </footer>
+  </footer>
   <script src="index.js"></script>
 
 
