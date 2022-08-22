@@ -9,13 +9,38 @@ const yyCard = document.querySelector('#fifth')
 const cvcInput = document.querySelector('#cvc')
 const cvcCard = document.querySelector('.backtext')
 const subButton = document.querySelector('.sub')
+const modal = document.getElementById('modal')
+const hiddeModal = document.querySelector('.modal__button')
+
+function formValidation () {
+  if (nameInput.value.length < 4) {
+    alert('You need more than 3 digits in your name')
+    return false
+  }
+  if (numberInput.value.length !== 16) {
+    alert('You need 16 numbers in your card')
+    return false
+  }
+  if (mmInput.value.length !== 2) {
+    alert('You need 2 numbers in your MM')
+    return false
+  }
+  if (yyInput.value.length !== 2) {
+    alert('You need 2 numbers in your YY')
+    return false
+  }
+  if (cvcInput.value.length !== 3) {
+    alert('You need 3 numbers in your CVC')
+    return false
+  }
+  return true
+}
 
 nameInput.addEventListener('input', e => {
   const text = nameInput.value
   if (text.length > 25) {
     preventDefault()
   }
-  console.log(text !== '')
   if (text === '') {
     nameCard.textContent = 'Jane Appleseed'
   }
@@ -74,7 +99,6 @@ mmInput.addEventListener('input', () => { yyaa(mmInput, mmCard) })
 
 cvcInput.addEventListener('input', e => {
   const text = cvcInput.value
-  console.log(text !== '')
   if (text === '') {
     cvcCard.textContent = 'Jane Appleseed'
   }
@@ -86,6 +110,17 @@ cvcInput.addEventListener('keydown', (e) => {
     e.preventDefault()
   }
 })
-subButton.addEventListener('click', () => {
-  subButton.preventDefault()
+subButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  if (!formValidation()) {
+    return
+  }
+  modal.classList.add('mostrar')
+})
+hiddeModal.addEventListener('click', (e) => {
+  e.preventDefault()
+  modal.classList.remove('mostrar')
+  setTimeout(() => {
+    window.location.reload()
+  }, 3000)
 })
