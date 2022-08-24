@@ -122,5 +122,5 @@ hiddeModal.addEventListener('click', (e) => {
   modal.classList.remove('mostrar')
   setTimeout(() => {
     window.location.reload()
-  }, 3000)
+  }, 1000)
 })

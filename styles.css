@@ -97,9 +97,6 @@ input[type=number] {
   right: 35px;
 }
 
-.form input {
-  margin-bottom: 15px;
-}
 .form {
   width: calc(100vw / 1.5);
   height: 100vh;
@@ -110,10 +107,10 @@ input[type=number] {
 }
 .form form input {
   height: 35px;
+  margin-bottom: 25px;
   border-radius: 5px;
-  border: 1px solid grey;
-  margin-top: 5px;
-  padding-left: 5px;
+  border: 1px solid rgba(5,5,5,.4);
+  padding: 20px 8px;
   font-size: 17px;
 }
 .form form .last-row {
